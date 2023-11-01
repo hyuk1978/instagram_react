@@ -1,0 +1,514 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.tabNav {
+    min-width: 335px;
+}
+.tabNav .head_container {
+    padding: 8px 12px 20px;
+    width: 335px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #d9d9d9;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+}
+.tabNav .logo {
+    padding: 32px 12px 16px;
+    margin-bottom: 20px;
+}
+.tabNav .logo::after {
+    content: "";
+    display: block;
+    width: 105px;
+    height: 30px;
+    background: url('../../assets/images/instagram-logo.png') no-repeat;
+    background-size: contain;
+}
+/* 공통 padding */
+.tabNav .icon {
+    padding: 16px 12px;
+    cursor: pointer;
+}
+.tabNav .icon:hover {
+    background-color: #f1f1f1;
+    border-radius: 8px;
+}
+.tabNav .icon:hover .tab_icon {
+    scale: 1.1;
+    transition: all 0.3s;
+}
+.icon>p {
+    padding-left: 16px;
+}
+.navTab {
+    display: flex;
+    align-items: center;
+}
+.tab_icon {
+    width: 24px;
+    height: 24px;
+}
+.tabNav .home_icon_image{background:url('../../assets/images/icon_svg/home_icon.svg') no-repeat;}
+.search_icon_image {background: url(../../assets/images/icon_svg/search_icon.svg) no-repeat;}
+.explore_icon_image {background: url(../../assets/images/icon_svg/explore_icon.svg) no-repeat;}
+.reels_icon_image {background: url(../../assets/images/icon_svg/reels_icon.svg) no-repeat;}
+.message_icon_image {background: url(../../assets/images/icon_svg/message_icon.svg) no-repeat;}
+.likeIt_icon_image {background: url(../../assets/images/icon_svg/likeit-icon.svg) no-repeat;}
+.write_icon_image {background: url(../../assets/images/icon_svg/write_icon.svg) no-repeat;}
+.profile_icon_image {
+    background: url(../../assets/images/icon_svg/profile_icon.jpg) no-repeat;
+    background-size: contain;
+}
+.threads_icon_image {background: url(../../assets/images/icon_svg/threads.svg) no-repeat;}
+.moreView_icon_image {background: url(../../assets/images/icon_svg/more_view_icon.svg) no-repeat;}
+
+/* contents */
+.main_contents {
+    width: 630px;
+}
+.contents_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 22px;
+    line-height: 1.6;
+}
+.story_tab {
+    width: 100%;
+    margin-bottom: 40px;
+}
+.story_tab ul {
+    display: flex;
+    flex-direction: row;
+}
+.update_story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 12px;
+    cursor: pointer;
+}
+.profile_img_container {
+    width: 66px;
+    height: 66px;
+    border: 1px solid transparent; /* 테두리는 투명으로 설정 */
+    background: linear-gradient(185deg, #ec1eff, #ff3c00, #FF9800); 
+    border-radius: 50%;
+}
+.profile_img {
+    position: relative;
+    top: 1px;
+    left: 1px;
+    width: 62px;
+    height: 62px;
+    /* background: url(../../assets/images/user_profile/user1.jpg) no-repeat; */
+    /* background-size: contain; */
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+.profile_name {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* update_board */
+.update_board {
+    width: 470px;
+    max-width: 100%;
+    /* height: auto; */
+    margin: 0 auto;
+    overflow-y: visible;
+}
+.board_user_profile_container {
+    /* margin-bottom: 20px; */
+    padding: 16px 0;
+    border-bottom: 1px solid #dbdbdb;
+}
+.board_user_profile_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.board_user_profile_header .board_profile_img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+    cursor: pointer;
+}
+.board_user_profile_header .border_profile_name {
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.board_user_profile_header span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #adadad;
+}
+.board_user_profile_header span::after {
+    content: "\00b7";
+    padding: 0 4px;
+}
+.board_user_profile_header span::before {
+    content: "\00b7";
+    padding: 0 4px;
+}
+.board_user_profile_header_right {
+    width: 24px;
+    height: 24px;
+    background: url(../../public/images/icon_svg/instagram_dot.svg) no-repeat;
+    cursor: pointer;
+}
+.follow_btn {
+    cursor: pointer;
+}
+.follow_btn p{
+    font-size: 14px;
+    font-weight: 700;
+    color: #0095fb;
+}
+.follow_btn p:hover{
+    color: #00376b;
+}
+
+/* board_contents */
+.board_contents  {
+    margin-top: 12px;
+}
+.board_text {
+    font-size: 14px;
+}
+.board_text span {
+    font-weight: bold;
+}
+.board_contents .board_slide_img img {
+    width: 100%;
+    border-radius: 4px;
+}
+.profile_container {
+    padding-left: 64px;
+}
+.board_btn { 
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.board_btn ul {
+    display: flex;
+}
+.board_btn_img {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+.board_btn_img:nth-child(1) {background: url(../../public/images/icon_svg/likeit-icon.svg);}
+.liked {background: url(../../public/images/icon_svg/liked.svg) no-repeat !important; }
+.board_btn_img:nth-child(2) {background: url(../../public/images/icon_svg/instagram_comment.svg);}
+.board_btn_img:nth-child(3) {background: url(../../public/images/icon_svg/messsage_icon.svg);}
+.board_btn_img_right {
+    width: 24px; 
+    height: 24px;
+    background: url(../../public/images/icon_svg/label.svg);
+    cursor: pointer;
+}
+/* 좋아요 */
+.likeIt p {
+    font-size: 14px;
+    font-weight: 700;
+}
+/* 댓글 */
+.comment_form {
+    padding-top: 4px;;
+}
+
+.custom-svg-icon {
+    fill: red;
+}
+/* 프로필영역 */
+.profile_area {
+    width: 320px;
+    align-items: center;
+    vertical-align: middle;
+    line-height: 1.4;
+}
+.user_profile {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.user_profile img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+.user_profile>div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+.user_profile>div strong {
+    font-weight: bold;
+}
+.user_profile>div button {
+    font-size: 12px;
+    font-weight: bold;
+    color: #0095fb;
+    cursor: pointer;
+}
+
+/* 추천 팔로우 */
+.RecommendedUser {
+    margin-bottom: 40px;
+}
+.main_right_follow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin: 25px 0; */
+}
+.main_right_follow h2 {
+    font-size: 14px;
+    color: #737373;
+    cursor: pointer;
+}
+.main_right_follow p {
+    font-size: 12px ;
+    font-weight: bold;
+    cursor: pointer;
+}
+.recommend_follow_users strong+p {
+    font-size: 12px;
+    color: #737373;
+}
+
+
+/* Carousel 커스텀 */
+.control-arrow {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+
+
+/* 미디어쿼리 */
+@media screen and (width : 1920px) {
+    .tabNav {
+        width: 335px;
+        position: relative;
+    }
+    .tabNav .head_container {
+        padding: 8px 12px 20px;
+        width: 335px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-right: 1px solid #d9d9d9;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 99999;
+    }
+}
+
+@media (min-width:1264px) and (max-width: 1919px) {
+    .tabNav {
+        width: 335px;
+        position: relative;
+        /* 수정 */
+        width: 220px;
+        min-width: 220px;
+    }
+    .tabNav .head_container {
+        padding: 8px 12px 20px;
+        width: 335px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-right: 1px solid #d9d9d9;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 99999;
+        /* 수정 */
+        width: 220px;
+    }
+}
+
+
+/* nav 아이콘만 보이기 */
+@media screen and (max-width:1400px){
+    .wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    .tabNav {
+        width: 335px;
+        position: relative;
+        /* 수정 */
+        width: 80px;
+        min-width: 80px;
+    }
+    .tabNav .head_container {
+        padding: 8px 12px 20px;
+        width: 335px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-right: 1px solid #d9d9d9;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 99999;
+        /* 수정 */
+        width: 72px;
+        background: #fff;
+        z-index: 9999;
+        padding: 12px;
+    }
+    .tabNav .logo::after {
+        content: "";
+        display: block;
+        width: 105px;
+        height: 30px;
+        /* 수정 */
+        width: 24px;
+        height: 24px;
+        background: url('../../public/images/icon_svg/instagram_mini_logo.svg') no-repeat;
+        background-size: contain;
+    }
+    .icon p {
+        /* 수정 */
+        display: none;
+    }
+    .tabNav .logo {
+        padding: 32px 12px 16px;
+        margin-bottom: 20px;
+    }
+    /* 공통 padding */
+    .tabNav .icon {
+        padding: 16px 12px;
+        cursor: pointer;
+    }
+    .tabNav .icon:hover {
+        background-color: #f1f1f1;
+        border-radius: 8px;
+    }
+    .tabNav .icon:hover .tab_icon {
+        scale: 1.1;
+        transition: all 0.3s;
+    }
+    .icon>p {
+        padding-left: 16px;
+        /* 수정 */
+        padding-left: 0;
+    }
+}
+
+
+/* 프로필 영역 가리기 */
+@media screen and (max-width:1159px){
+    /* 프로필영역 */
+    .profile_container {
+        /* 수정 */
+        display: none;
+    }
+    .profile_area {
+        width: 320px;
+        align-items: center;
+        vertical-align: middle;
+        line-height: 1.4;
+    }
+    .user_profile {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .user_profile img {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        margin-right: 12px;
+    }
+    .user_profile>div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+    }
+    .user_profile>div strong {
+        font-weight: bold;
+    }
+    .user_profile>div button {
+        font-size: 12px;
+        font-weight: bold;
+        color: #0095fb;
+        cursor: pointer;
+    }
+
+    /* 추천 팔로우 */
+    .main_right_follow {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 25px 0;
+    }
+    .main_right_follow h2 {
+        font-size: 14px;
+        color: #737373;
+        cursor: pointer;
+    }
+    .main_right_follow p {
+        font-size: 12px ;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .recommend_follow_users strong+p {
+        font-size: 12px;
+        color: #737373;
+    }
+}
+
+/* footer */
+.side_tab {
+    display: flex;
+    flex-direction: column;
+}
+.footer {
+    line-height: 1.2;
+}
+.footer ul {
+    display: flex;
+}
+.footer span{
+    font-size: 12px;
+    color: #c7c7c7;
+}
+.footer ul li span::after {
+    content: ".";
+    padding: 0 4px 0 2px;
+}
+.footer h2 {
+    margin-top: 20px;
+}
