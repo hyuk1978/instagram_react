@@ -8,11 +8,13 @@ function RecommendedUser( {userList, onChangeFollowing} ) {
             <h2>회원님을 위한 추천</h2>
             <p>모두보기</p>
         </div>
-        {userList && userList.map((user) => (
+        {userList && userList.slice(1,5).map((user) => (
             <div className='recommend_follow_users user_profile' key={user.id}>
-                <Link to="/Profile_Page"><img src={user.img} alt={user.name} /></Link>
+                <Link to="/">
+                    <img src={user.img} alt={user.name} />
+                </Link>
                 <div>
-                    <Link to="/Profile_Page">
+                    <Link to="/">
                         <strong>{user.nickname}</strong>
                         <p>회원님을 위한 추천</p>
                     </Link>

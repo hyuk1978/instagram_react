@@ -1,21 +1,21 @@
 import './App.css';
 import Home from './screens/Home';
-import { BrowserRouter , Routes , Route } from 'react-router-dom';
+import { Routes , Route, HashRouter } from 'react-router-dom';
 import ProfileTab from './screens/ProfileTab';
 import Explore from './screens/Explore';
 import Reels from './screens/Reels';
-
+import { instaUserList } from './UserListItem';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Explore" element={<Explore/>} />
-        <Route path="/Reels" element={<Reels/>}/>
-        <Route path="/ProfileTab" element={<ProfileTab/>} />
+        <Route path="/" element={<Home instaUserList={instaUserList}/>} />
+        {/* <Route path="/Explore" element={<Explore instaUserList={instaUserList}/>} /> */}
+        {/* <Route path="/Reels" element={<Reels instaUserList={instaUserList}/>}/> */}
+        {/* <Route path="/ProfileTab" element={<ProfileTab instaUserList={instaUserList}/>} /> */}
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

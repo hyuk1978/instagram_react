@@ -2,44 +2,6 @@ import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
-
-function elapsedText(user) {
-    // 초, 분, 시간, 일 간격 정의
-    const second = 1;
-    const minute = second * 60;
-    const hour = minute * 60;
-    const day = hour * 24;
-    const week = day * 7;
-    // 현재 시간 가져오기
-    const today = new Date(); 
-
-    let firstPostDate; // 첫 번째 게시물의 날짜를 저장하기 위한 변수
-
-    // 게시글이 존재하고 최소 하나의 게시물이 있을 때
-    if (user.writeBoard && user.writeBoard.length > 0) {
-        firstPostDate = user.writeBoard[0].writeDate;
-    }
-    // 게시 시간과 현재 시간 간의 경과 시간 계산
-    if (firstPostDate) {
-        const elapsedTime = Math.trunc((today - firstPostDate) / 1000);
-
-        if (elapsedTime < second) {
-            return '방금';
-        } else if (elapsedTime < minute) {
-            return elapsedTime + '초';
-        } else if (elapsedTime < hour) {
-            return Math.trunc(elapsedTime / minute) + '분';
-        } else if (elapsedTime < day) {
-            return Math.trunc(elapsedTime / hour) + '시간';
-        } else if (elapsedTime < week) {
-            return Math.trunc(elapsedTime / day) + '일';
-        } else {
-            return Math.trunc(elapsedTime / week) + '주';
-        }
-    }
-    return '';
-}
-
 function likeNotation(user) {
     const like = user.like;
     if(like >= 10000){
@@ -49,7 +11,7 @@ function likeNotation(user) {
     return user.like;
 }
 
-function Board({ userList, onChangeFollowing, handleLikeButtonClick }) {
+function Board({ userList, onChangeFollowing, handleLikeButtonClick, elapsedText }) {
     return (
         <section className='update_board'>
             {userList.map((user, userIndex) => (
