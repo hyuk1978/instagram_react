@@ -572,7 +572,7 @@
     .main_contents {
         width: 100vw;
         padding: 0 12px;
-        
+        margin-bottom: 80px;
     }
     .update_board {
         width: 100vw;
