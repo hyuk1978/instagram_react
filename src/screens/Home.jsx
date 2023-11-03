@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import UserInfo from '../user/UserInfo';
 import Head from '../structure Component/Head';
 import Mobile_Head from '../structure Component/Mobile_Head';
+import Mobile_Footer from '../structure Component/Mobile_Footer';
 
 function Home( {instaUserList} ) {
   return (
@@ -18,6 +19,7 @@ function Home( {instaUserList} ) {
           </main>
         </section>
       </div>
+      <Mobile_Footer/>
     </div>
   );
 }
