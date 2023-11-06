@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home instaUserList={instaUserList}/>} />
         {/* <Route path="/Explore" element={<Explore instaUserList={instaUserList}/>} /> */}
-        {/* <Route path="/Reels" element={<Reels instaUserList={instaUserList}/>}/> */}
+        <Route path="/Reels" element={<Reels instaUserList={instaUserList}/>}/>
         {/* <Route path="/ProfileTab" element={<ProfileTab instaUserList={instaUserList}/>} /> */}
       </Routes>
     </HashRouter>

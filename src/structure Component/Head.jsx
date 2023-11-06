@@ -32,14 +32,14 @@ function Head() {
                         <p>탐색 탭</p>
                         </div>
                     {/* </Link> */}
-                    {/* <Link to="/Reels"> */}
+                    <Link to="/Reels">
                         <div className='icon navTab'>
                         <div className="reels_icon_image tab_icon">
                             <img src={`${process.env.PUBLIC_URL}/images/icon_svg/reels_icon.svg`} alt="" />
                         </div>
                         <p>릴스</p>
                         </div>
-                    {/* </Link> */}
+                    </Link>
                     <Link to="/">
                         <div className='icon navTab'>
                         <div className="message_icon_image tab_icon">

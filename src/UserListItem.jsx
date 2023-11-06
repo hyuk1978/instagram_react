@@ -2,15 +2,14 @@ export const instaUserList = [
     { 
         id: 1,
         nickname: 'hanhyojoo200',
-        // img :  `${process.env.PUBLIC_URL}/images/user_profile/user1.jpg`,
-        img :  `/images/user_profile/user1.jpg`,
-        date : new Date(169143937814),
-        post : 0,
-        following : 0,
-        followers : 0,
-        name : 'Hanhyojoo',
-        aboutMe : 'Thanks for visited my profile',
-        writeBoard : [
+        img: `/images/user_profile/user1.jpg`,
+        date: new Date(169143937814),
+        post: 0,
+        following: 0,
+        followers: 0,
+        name: 'Hanhyojoo',
+        aboutMe: 'Thanks for visited my profile',
+        writeBoard: [
             {
                 writeBoardId : 1,
                 writeDate : new Date(1698643937812),
@@ -29,7 +28,19 @@ export const instaUserList = [
                 like : 132587,
                 title : '@ferragamo',
                 text : ''
-            }
+            },
+            {
+                writeBoardId : 20001,
+                writeDate : new Date(1698113937814),
+                img : [
+                    `/images/writeBoard/user1/write2/img1.jpg`,
+                    `/images/writeBoard/user1/write2/img2.jpg`,
+                    `/images/writeBoard/user1/write2/img3.jpg`,
+                ],
+                like : 1,
+                title : '@ferragamo',
+                text : ''
+            },
         ]
     },
     { 
@@ -44,7 +55,7 @@ export const instaUserList = [
         aboutMe : '조인성 배우의 공식 인스타그램입니다.',
         writeBoard : [
             {
-                writeBoardId : 1,
+                writeBoardId : 5,
                 writeDate : new Date(1698613937814),
                 img : [
                     `${process.env.PUBLIC_URL}/images/writeBoard/user2/write1/img1.jpg`,
@@ -69,7 +80,7 @@ export const instaUserList = [
         aboutMe : 'BH엔터테인먼트와 박보영이 함께 운영하는 인스타그램입니다',
         writeBoard : [
             {
-                writeBoardId : 1,
+                writeBoardId : 4,
                 writeDate : new Date(1698513937814),
                 img : [
                     `${process.env.PUBLIC_URL}/images/writeBoard/user3/write1/img1.jpg`,
@@ -92,7 +103,7 @@ export const instaUserList = [
         aboutMe : '',
         writeBoard : [
             {
-                writeBoardId : 1,
+                writeBoardId : 7,
                 writeDate : new Date(1698113937814),
                 img : [
                     `${process.env.PUBLIC_URL}/images/writeBoard/user4/write1/img1.jpg`,
@@ -120,7 +131,7 @@ export const instaUserList = [
         aboutMe : '',
         writeBoard : [
             {
-                writeBoardId : 1,
+                writeBoardId : 2,
                 writeDate : new Date(1698113937814),
                 img : [
                     `${process.env.PUBLIC_URL}/images/writeBoard/user6/write1/img1.jpg`,
@@ -129,7 +140,7 @@ export const instaUserList = [
                 like : 8527,
                 title : '발레리나 개봉했어요 Ballerina just released on Netfilx',
                 text : ''
-            }
+            },
         ]
     },
 ]
